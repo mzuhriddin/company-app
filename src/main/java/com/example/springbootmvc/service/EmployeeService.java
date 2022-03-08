@@ -21,7 +21,7 @@ public class EmployeeService {
 
     public ApiResponse add(EmployeeDTO employeeDTO){
         Optional<Department> optionalDepartment = departmentRepository.findById(employeeDTO.getDepartmentId());
-        if (optionalDepartment.isPresent()) return new ApiResponse("Akaajon bunaqa id yoq", false);
+        if (optionalDepartment.isEmpty()) return new ApiResponse("Akaajon bunaqa id yoq", false);
         Department department = optionalDepartment.get();
 
         Employee employee = new Employee();
@@ -35,7 +35,7 @@ public class EmployeeService {
     public ApiResponse update(EmployeeDTO employeeDTO, Integer id) {
         Optional<Department> optionalDepartment = departmentRepository.findById(employeeDTO.getDepartmentId());
 
-        if (optionalDepartment.isPresent()) {
+        if (optionalDepartment.isEmpty()) {
             return new ApiResponse("Akaajon bunaqa id yoq", false);
         }
 
