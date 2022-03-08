@@ -1,0 +1,16 @@
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/repository/DepartmentRepository.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/controller/DepartmentController.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/dto/ApiResponse.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/service/CompanyService.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/controller/CompanyController.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/dto/DepartmentDTO.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/service/EmployeeService.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/Application.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/entity/Department.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/dto/EmployeeDTO.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/entity/Company.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/service/DepartmentService.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/entity/Employee.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/controller/EmployeeController.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/repository/CompanyRepository.java
+/Users/zuhriddin/projects/pdp/SpringBoot/src/main/java/com/example/springbootmvc/repository/EmployeeRepository.java
