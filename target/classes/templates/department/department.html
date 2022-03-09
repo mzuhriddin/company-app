@@ -8,7 +8,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>Product Page</h1>
+    <a href="/" class="btn btn-info">Main page</a>
+    <h1>Department Page</h1>
     <a href="/department/add" class="btn btn-success">Yangi Department Qo'shish</a>
     <table class="table table-hover">
         <thead>
@@ -22,11 +23,11 @@
         <tbody>
         <tr th:each=" department,i : ${list}">
             <td th:text="${i.index+1}"></td>
-            <td th:text="${department.name}"></td>
-            <td th:text="${department.company.name}"></td>
+            <td th:text="${department.getName()}"></td>
+            <td th:text="${department.getCompany().getName()}"></td>
             <td>
-                <a class="btn btn-warning" th:href="${'/department/edit/'+department.id}">Edit</a>
-                <a class="btn btn-danger" th:href="${'/department/delete/'+department.id}">Delete</a>
+                <a class="btn btn-warning" th:href="${'/department/edit/'+department.getId()}">Edit</a>
+                <a class="btn btn-danger" th:href="${'/department/delete/'+department.getId()}">Delete</a>
             </td>
         </tr>
         </tbody>

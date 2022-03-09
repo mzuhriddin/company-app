@@ -1,13 +1,17 @@
 package com.example.springbootmvc.controller;
 
 import com.example.springbootmvc.dto.DepartmentDTO;
+import com.example.springbootmvc.entity.Employee;
 import com.example.springbootmvc.repository.CompanyRepository;
 import com.example.springbootmvc.repository.DepartmentRepository;
+import com.example.springbootmvc.repository.EmployeeRepository;
 import com.example.springbootmvc.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 
 @Controller
@@ -20,6 +24,8 @@ public class DepartmentController {
     DepartmentRepository departmentRepository;
     @Autowired
     CompanyRepository companyRepository;
+    @Autowired
+    EmployeeRepository employeeRepository;
 
     //zaproslarni tutib ishlatish
 //    @RequestMapping(method = RequstMethod.GET)
@@ -47,7 +53,10 @@ public class DepartmentController {
 
     @GetMapping("/delete/{id}") //1 45 24 90
     public String delete(@PathVariable Integer id) {
-        departmentRepository.deleteById(id);
+        Optional<Employee> employeeByDepartment_id = employeeRepository.findEmployeeByDepartment_Id(id);
+        if (employeeByDepartment_id.isEmpty()) {
+            departmentRepository.deleteById(id);
+        }
         return "redirect:/department";
     }
 
