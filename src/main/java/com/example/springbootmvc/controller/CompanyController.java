@@ -51,9 +51,7 @@ public class CompanyController {
 
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable Integer id) {
-        Company company = new Company();
-        company.setId(id);
-        company.setName(companyRepository.findById(id).get().getName());
+        Company company = companyRepository.getById(id);
         model.addAttribute("company", company);
         return "company/company-edit";
     }
